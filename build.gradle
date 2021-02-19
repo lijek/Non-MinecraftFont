@@ -25,8 +25,6 @@ apply plugin: "fabric-loom"
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
-ignoredMavenDependencies = ["fabric-loader"]
-
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
@@ -140,6 +138,9 @@ publishing {
 				builtBy remapJar
 			}
 			pom.withXml {
+				ignoredMavenDependencies = [
+						"fabric-loader"
+				]
 				asNode().dependencies.dependency.each { dep ->
 					if(dep.artifactId.last().value().last() in ignoredMavenDependencies) {
 						assert dep.parent().remove(dep)
