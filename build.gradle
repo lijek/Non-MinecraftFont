@@ -74,6 +74,8 @@ dependencies {
 		spec.version = "b1.7.3-${project.yarn_mappings}"
 	}
 
+	compile "org.slick2d:slick2d-core:1.0.0"
+
 	// convenience stuff
 	// adds some useful annotations for data classes. does not add any dependencies
 	compileOnly 'org.projectlombok:lombok:1.18.16'
