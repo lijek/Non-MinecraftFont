@@ -48,10 +48,6 @@ public class TextRenderer {
             e.printStackTrace();
         }
 
-        System.out.println(fontName);
-        System.out.println(bold);
-        System.out.println(italic);
-
         awtFont = new Font(fontName, Font.PLAIN, 100);
         font = new UnicodeFont(awtFont, 100, bold, italic);
 
